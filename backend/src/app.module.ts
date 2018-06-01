@@ -18,13 +18,13 @@ import { PlatoEntity } from './plato/plato.entity';
       port: 3306,
       username: 'myadmin@dbserver-proyecto-appweb',
       password: 'ei8%uC#\\y6PfDbl',
-      database: 'restauranteGS',
+      database: 'pcv',
       entities: [
         __dirname +
-        '/../**/*.entity{.ts,.js}'
+        '/../**/*.entity{.ts,.js}',
       ],
       synchronize: true,
-      ssl: false
+      ssl: false,
     }),
     TypeOrmModule.forFeature([
       ClienteEntity,
@@ -33,8 +33,8 @@ import { PlatoEntity } from './plato/plato.entity';
       MenuEntity,
       PlatoEntity,
       ComboEntity,
-      BebidaEntity
-    ])
+      BebidaEntity,
+    ]),
   ],
   controllers: [AppController],
   providers: [AppService],
