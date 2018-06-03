@@ -11,6 +11,9 @@ export class ClienteEntity {
   nombreCliente: string;
 
   @Column({length: 50})
+  apellidoCliente: string;
+
+  @Column({length: 50})
   emailCliente: string;
 
   @OneToMany(
